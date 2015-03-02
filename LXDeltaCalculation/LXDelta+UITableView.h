@@ -12,4 +12,6 @@
 
 @interface LXDelta (UITableView)
 
+- (void)applyUpdatesToTableView:(UITableView *)tableView inSection:(NSUInteger)section withRowAnimation:(UITableViewRowAnimation)rowAnimation;
+
 @end
