@@ -10,6 +10,10 @@
 		AB5E84711AA4F026007EB00B /* LXDeltaCalculation.h in Headers */ = {isa = PBXBuildFile; fileRef = AB5E84701AA4F026007EB00B /* LXDeltaCalculation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB5E84771AA4F026007EB00B /* LXDeltaCalculation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5E846B1AA4F026007EB00B /* LXDeltaCalculation.framework */; };
 		AB5E847E1AA4F026007EB00B /* LXDeltaCalculationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5E847D1AA4F026007EB00B /* LXDeltaCalculationTests.m */; };
+		AB5E84891AA4F138007EB00B /* LXDeltaCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = AB5E84871AA4F138007EB00B /* LXDeltaCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB5E848A1AA4F138007EB00B /* LXDeltaCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5E84881AA4F138007EB00B /* LXDeltaCalculator.m */; };
+		AB5E848D1AA4F3AC007EB00B /* LXDelta.h in Headers */ = {isa = PBXBuildFile; fileRef = AB5E848B1AA4F3AC007EB00B /* LXDelta.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB5E848E1AA4F3AC007EB00B /* LXDelta.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5E848C1AA4F3AC007EB00B /* LXDelta.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		AB5E84761AA4F026007EB00B /* LXDeltaCalculationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LXDeltaCalculationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5E847C1AA4F026007EB00B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB5E847D1AA4F026007EB00B /* LXDeltaCalculationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXDeltaCalculationTests.m; sourceTree = "<group>"; };
+		AB5E84871AA4F138007EB00B /* LXDeltaCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDeltaCalculator.h; sourceTree = "<group>"; };
+		AB5E84881AA4F138007EB00B /* LXDeltaCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDeltaCalculator.m; sourceTree = "<group>"; };
+		AB5E848B1AA4F3AC007EB00B /* LXDelta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDelta.h; sourceTree = "<group>"; };
+		AB5E848C1AA4F3AC007EB00B /* LXDelta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDelta.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,10 @@
 			children = (
 				AB5E84701AA4F026007EB00B /* LXDeltaCalculation.h */,
 				AB5E846E1AA4F026007EB00B /* Supporting Files */,
+				AB5E84871AA4F138007EB00B /* LXDeltaCalculator.h */,
+				AB5E84881AA4F138007EB00B /* LXDeltaCalculator.m */,
+				AB5E848B1AA4F3AC007EB00B /* LXDelta.h */,
+				AB5E848C1AA4F3AC007EB00B /* LXDelta.m */,
 			);
 			path = LXDeltaCalculation;
 			sourceTree = "<group>";
@@ -109,7 +121,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB5E848D1AA4F3AC007EB00B /* LXDelta.h in Headers */,
 				AB5E84711AA4F026007EB00B /* LXDeltaCalculation.h in Headers */,
+				AB5E84891AA4F138007EB00B /* LXDeltaCalculator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +223,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB5E848E1AA4F3AC007EB00B /* LXDelta.m in Sources */,
+				AB5E848A1AA4F138007EB00B /* LXDeltaCalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +410,7 @@
 				AB5E84831AA4F026007EB00B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB5E84841AA4F026007EB00B /* Build configuration list for PBXNativeTarget "LXDeltaCalculationTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +419,7 @@
 				AB5E84861AA4F026007EB00B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

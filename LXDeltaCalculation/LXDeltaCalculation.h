@@ -16,4 +16,5 @@ FOUNDATION_EXPORT const unsigned char LXDeltaCalculationVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <LXDeltaCalculation/PublicHeader.h>
 
-
+#import <LXDeltaCalculation/LXDeltaCalculator.h>
+#import <LXDeltaCalculation/LXDelta.h>
