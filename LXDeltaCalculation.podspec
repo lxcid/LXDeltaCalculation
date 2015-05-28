@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'LXDeltaCalculation'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'To calculate the differences between 2 collections. A clone of BKDeltaCalculator.'
   s.description      = <<-description
   LXDeltaCalculation is a clone of Basket/BKDeltaCalculator. Much of the programming interface was adopted from BKDeltaCalculator but with the following changes:
