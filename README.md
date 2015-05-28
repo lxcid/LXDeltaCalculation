@@ -1,4 +1,8 @@
-# LXDeltaCalculation
+LXDeltaCalculation
+==================
+
+[![Build Status](https://travis-ci.org/lxcid/LXDeltaCalculation.svg?branch=master)](https://travis-ci.org/lxcid/LXDeltaCalculation)
+[![Coverage Status](https://coveralls.io/repos/lxcid/LXDeltaCalculation/badge.svg)](https://coveralls.io/r/lxcid/LXDeltaCalculation)
 
 LXDeltaCalculation is a clone of [Basket/BKDeltaCalculator](https://github.com/Basket/BKDeltaCalculator). Much of the programming interface was adopted from BKDeltaCalculator but with the following changes:
 
