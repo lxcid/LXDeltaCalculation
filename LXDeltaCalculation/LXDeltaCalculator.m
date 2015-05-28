@@ -49,9 +49,8 @@ const lx_delta_calculator_equality_test_t LXDeltaCalculatorDefaultEqualityTest =
 }
 
 - (LXDelta *)deltaFromOldArray:(NSArray *)oldArray toNewArray:(NSArray *)newArray {
-    
     // Deleted
-    NSMutableArray *newArrayMutableCopy = [newArray mutableCopy];
+    NSMutableArray *newArrayMutableCopy = [newArray mutableCopy] ?: [[NSMutableArray alloc] init];
     NSMutableIndexSet *deletedIndices = [NSMutableIndexSet indexSet];
     for (NSUInteger i = 0; i < oldArray.count; i++) {
         id objectInOldArray = oldArray[i];
@@ -64,7 +63,7 @@ const lx_delta_calculator_equality_test_t LXDeltaCalculatorDefaultEqualityTest =
     }
     
     // Inserted
-    NSMutableArray *oldArrayMutableCopy = [oldArray mutableCopy];
+    NSMutableArray *oldArrayMutableCopy = [oldArray mutableCopy] ?: [[NSMutableArray alloc] init];
     NSMutableIndexSet *insertedIndices = [NSMutableIndexSet indexSet];
     for (NSUInteger i = 0; i < newArray.count; i++) {
         id objectInNewArray = newArray[i];
@@ -77,7 +76,7 @@ const lx_delta_calculator_equality_test_t LXDeltaCalculatorDefaultEqualityTest =
     }
     
     // Moved
-    oldArrayMutableCopy = [oldArray mutableCopy];
+    oldArrayMutableCopy = [oldArray mutableCopy] ?: [[NSMutableArray alloc] init];
     NSMutableArray *unchangedIndexPairs = [NSMutableArray array];
     NSMutableArray *movedIndexPairs = [NSMutableArray array];
     for (NSUInteger indexInNewArray = 0; indexInNewArray < newArray.count; indexInNewArray++) {

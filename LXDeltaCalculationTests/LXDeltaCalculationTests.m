@@ -17,7 +17,7 @@
 
 @implementation LXDeltaCalculationTests
 
-- (void)testEmpty {
+- (void)testEmptyOrNilArrays {
     NSArray *oldArray = @[ @1, @3, @5 ];
     NSArray *newArray = @[ @0, @1, @2, @3, @4, @5, @6 ];
     
@@ -25,6 +25,14 @@
     
     {
         LXDelta *delta = [defaultCalculator deltaFromOldArray:nil toNewArray:newArray];
+        XCTAssert(delta.addedIndices.count == 7, @"7 item added.");
+        XCTAssert(delta.removedIndices.count == 0, @"0 item removed.");
+        XCTAssert(delta.movedIndexPairs.count == 0, @"0 item moved.");
+        XCTAssert(delta.unchangedIndexPairs.count == 0, @"0 items unchanged.");
+    }
+    
+    {
+        LXDelta *delta = [defaultCalculator deltaFromOldArray:@[] toNewArray:newArray];
         XCTAssert(delta.addedIndices.count == 7, @"7 item added.");
         XCTAssert(delta.removedIndices.count == 0, @"0 item removed.");
         XCTAssert(delta.movedIndexPairs.count == 0, @"0 item moved.");
@@ -40,7 +48,39 @@
     }
     
     {
+        LXDelta *delta = [defaultCalculator deltaFromOldArray:oldArray toNewArray:@[]];
+        XCTAssert(delta.addedIndices.count == 0, @"0 item added.");
+        XCTAssert(delta.removedIndices.count == 3, @"3 item removed.");
+        XCTAssert(delta.movedIndexPairs.count == 0, @"0 item moved.");
+        XCTAssert(delta.unchangedIndexPairs.count == 0, @"0 items unchanged.");
+    }
+    
+    {
         LXDelta *delta = [defaultCalculator deltaFromOldArray:nil toNewArray:nil];
+        XCTAssert(delta.addedIndices.count == 0, @"0 item added.");
+        XCTAssert(delta.removedIndices.count == 0, @"0 item removed.");
+        XCTAssert(delta.movedIndexPairs.count == 0, @"0 item moved.");
+        XCTAssert(delta.unchangedIndexPairs.count == 0, @"0 items unchanged.");
+    }
+    
+    {
+        LXDelta *delta = [defaultCalculator deltaFromOldArray:@[] toNewArray:@[]];
+        XCTAssert(delta.addedIndices.count == 0, @"0 item added.");
+        XCTAssert(delta.removedIndices.count == 0, @"0 item removed.");
+        XCTAssert(delta.movedIndexPairs.count == 0, @"0 item moved.");
+        XCTAssert(delta.unchangedIndexPairs.count == 0, @"0 items unchanged.");
+    }
+    
+    {
+        LXDelta *delta = [defaultCalculator deltaFromOldArray:@[] toNewArray:nil];
+        XCTAssert(delta.addedIndices.count == 0, @"0 item added.");
+        XCTAssert(delta.removedIndices.count == 0, @"0 item removed.");
+        XCTAssert(delta.movedIndexPairs.count == 0, @"0 item moved.");
+        XCTAssert(delta.unchangedIndexPairs.count == 0, @"0 items unchanged.");
+    }
+    
+    {
+        LXDelta *delta = [defaultCalculator deltaFromOldArray:nil toNewArray:@[]];
         XCTAssert(delta.addedIndices.count == 0, @"0 item added.");
         XCTAssert(delta.removedIndices.count == 0, @"0 item removed.");
         XCTAssert(delta.movedIndexPairs.count == 0, @"0 item moved.");
