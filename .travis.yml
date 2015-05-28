@@ -1,3 +1,10 @@
-before_install: rvm use $RVM_RUBY_VERSION
-install: bundle install --without=documentation --path ../travis_bundle_dir
-after_success: slather
+language: objective-c
+
+install:
+  - bundle install --without=documentation
+
+script:
+  - xcodebuild test -project LXDeltaCalculation.xcodeproj -scheme LXDeltaCalculation -sdk iphonesimulator
+
+after_success:
+  - bundle exec slather
